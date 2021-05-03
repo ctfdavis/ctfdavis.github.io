@@ -1,0 +1,25 @@
+.whatsnext {
+    display: flex;
+    padding: 5%;
+    justify-content: space-around;
+    align-items: center;
+    font-family: "Nunito Sans", sans-serif;
+    color: $grey-white;
+
+    &__logo {
+        width: 35rem;
+        height: 35rem;
+    }
+
+    &__text {
+        width: 30%;
+        font-size: 2.5rem;
+        text-align: center;
+        line-height: 1.6;
+    }
+
+    &__name {
+        font-size: 2.75rem;
+        color: $light-green;
+    }
+}

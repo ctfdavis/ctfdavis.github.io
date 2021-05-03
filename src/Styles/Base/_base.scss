@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; // for making 1rem = 10px
+}
+
+body {
+    background-color: $primary-purple-dark;
+    &::-webkit-scrollbar {
+        width: 10px;
+        background-color: $secondary-purple-dark;
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: $violet;
+    }
+    &::-webkit-scrollbar-button {
+        background-color: $primary-rose;
+    }
+}

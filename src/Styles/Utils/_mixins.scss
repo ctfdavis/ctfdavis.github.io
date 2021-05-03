@@ -1,0 +1,11 @@
+@mixin icons {
+        border-radius: 50%;
+        cursor: pointer;
+        &:hover {
+            background-color: $primary-translucent-grey;
+        }
+
+        &:active {
+            background-color: $secondary-translucent-grey;
+        }
+}

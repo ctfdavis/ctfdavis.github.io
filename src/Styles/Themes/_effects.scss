@@ -1,0 +1,8 @@
+.special-hover {
+    display: inline-block;
+    transition: 0.3s;
+    &:hover {
+        color: $light-green;
+        transform: scale(1.05);
+    }
+}
