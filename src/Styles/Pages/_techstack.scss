@@ -6,6 +6,7 @@
     color: $grey-white;
     gap: 1rem;
     text-align: center;
+    transform: translateY(-50%);
 
     @include respond(phone) {
         height: 100vh;

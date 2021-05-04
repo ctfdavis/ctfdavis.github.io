@@ -4,10 +4,10 @@ import { useTranslation } from "react-i18next";
 import "../../Translations/i18n";
 
 const TechStack = () => {
-    const {t} = useTranslation();
+    const { t } = useTranslation();
     return (
         <section className="main__section">
-            <a className="anchor" id="TechStack"></a>
+            <a className="anchor--2" id="TechStack"></a>
             <Heading value={<><span className="special-hover">GO-TO</span> <span className="special-hover">TECH</span> <span className="special-hover">STACK</span></>} />
             <div className="techstack">
                 <h1 className="techstack__category">
