@@ -29,7 +29,7 @@ const Works = () => {
             , "https://codepen.io/ctfdavis/full/bGBpePw", "https://codepen.io/ctfdavis/pen/bGBpePw"]
         ,
         [v3_pic, "Personal Website (v3)", t("work_6")
-            , "https://davischan.pro/websites/v3/index.html"]
+            , "https://davischan.pro/prev/websites/v3/index.html", "https://github.com/ctfdavis/prev/tree/main/websites/v3"]
     ];
     return (
         <section id="Works" className="main__section">
