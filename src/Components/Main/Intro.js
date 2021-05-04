@@ -12,14 +12,23 @@ const Intro = () => {
 
     const logoContainer = useRef();
     const containerEnter = (e) => {
-        let xAxis = (window.innerWidth / 4 - e.pageX) / 2;
-        let yAxis = (window.innerHeight / 2 - e.pageY) / 2;
-        logoContainer.current.style.transition = 'none';
-        logoContainer.current.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
+        if (!(('ontouchstart' in window) ||
+            (navigator.maxTouchPoints > 0) ||
+            (navigator.msMaxTouchPoints > 0))) {
+            let xAxis = (window.innerWidth / 4 - e.pageX) / 2;
+            let yAxis = (window.innerHeight / 2 - e.pageY) / 2;
+            logoContainer.current.style.transition = 'none';
+            logoContainer.current.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
+
+        }
     }
     const containerLeave = (e) => {
+        if (!(('ontouchstart' in window) ||
+            (navigator.maxTouchPoints > 0) ||
+            (navigator.msMaxTouchPoints > 0))) {
         logoContainer.current.style.transition = 'all .75s ease';
         logoContainer.current.style.transform = "rotateY(0deg) rotateX(0deg)";
+            }
     }
     return (
         <section id="Home" className="main__section">
@@ -35,7 +44,7 @@ const Intro = () => {
                     <HashLink className="hashlink" smooth to="#GetInTouch">
                         <Button className="get-in-touch-btn" variant="contained">
                             {t("get_in_touch")}
-                    </Button></HashLink>
+                        </Button></HashLink>
                 </div>
             </div>
             <svg className="go-down-icon">
