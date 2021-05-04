@@ -645,12 +645,14 @@ a.anchor--3 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   font-family: "Nunito Sans", sans-serif;
   color: rgba(255, 255, 255, 0.8);
   gap: 1rem;
   text-align: center;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  margin-bottom: 10rem;
 }
 
 @media (max-width: 450px) {
