@@ -31,7 +31,8 @@ const Intro = () => {
             }
     }
     return (
-        <section id="Home" className="main__section">
+        <section className="main__section">
+            <a className="anchor" id="Home"></a>
             <Heading value={<><span className="special-hover">DCUFO</span> | <span className="special-hover">DAVIS CHAN</span></>} />
             <div className="intro">
                 <div className="threed-container" onMouseMove={(e) => containerEnter(e)} onMouseLeave={(e) => containerLeave(e)}>

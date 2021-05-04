@@ -59,6 +59,10 @@
     width: 3.5rem;
     height: 3.5rem;
     animation: in-and-out 1s alternate infinite;
+
+    @media only screen and (max-height: 31.25em) {
+        display: none;
+    }
 }
 
 @keyframes in-and-out {

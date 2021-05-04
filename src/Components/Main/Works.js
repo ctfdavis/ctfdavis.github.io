@@ -32,7 +32,8 @@ const Works = () => {
             , "https://davischan.pro/prev/websites/v3/index.html", "https://github.com/ctfdavis/prev/tree/main/websites/v3"]
     ];
     return (
-        <section id="Works" className="main__section">
+        <section className="main__section">
+            <a className="anchor" id="Works"></a>
             <Heading value={<><span className="special-hover">Selected</span> <span className="special-hover">Works</span></>} />
             <div className="works">
                 {worksData.map((items, index) => (

@@ -6,7 +6,8 @@ import "../../Translations/i18n";
 const TechStack = () => {
     const {t} = useTranslation();
     return (
-        <section id="TechStack" className="main__section">
+        <section className="main__section">
+            <a className="anchor" id="TechStack"></a>
             <Heading value={<><span className="special-hover">GO-TO</span> <span className="special-hover">TECH</span> <span className="special-hover">STACK</span></>} />
             <div className="techstack">
                 <h1 className="techstack__category">

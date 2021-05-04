@@ -8,7 +8,8 @@ const WhatsNext = () => {
     const { t } = useTranslation();
 
     return (
-        <section id="WhatsNext" className="main__section">
+        <section className="main__section">
+            <a className="anchor" id="WhatsNext"></a>
             <Heading value={<><span className="special-hover">What's</span> <span className="special-hover">Next</span></>} />
             <div className="whatsnext">
                 <img className="whatsnext__logo" src={dcufo_studio} alt="dcufo studio logo" />

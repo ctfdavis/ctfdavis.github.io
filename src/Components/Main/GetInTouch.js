@@ -6,7 +6,8 @@ import "../../Translations/i18n";
 const GetInTouch = () => {
     const { t } = useTranslation();
     return (
-        <section id="GetInTouch" className="main__section">
+        <section className="main__section">
+            <a className="anchor" id="GetInTouch"></a>
             <Heading value={<><span className="special-hover">Get</span> <span className="special-hover">In</span> <span className="special-hover">Touch</span></>} />
             <div className="get-in-touch">
                 <div className="get-in-touch__text">

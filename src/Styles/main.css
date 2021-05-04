@@ -182,6 +182,19 @@ body::-webkit-scrollbar-button {
   text-decoration: none;
 }
 
+a.anchor {
+  display: block;
+  position: relative;
+  visibility: hidden;
+  top: -1.5rem;
+}
+
+@media only screen and (max-width: 56.25em), (max-height: 37.5em) {
+  a.anchor {
+    top: -4rem;
+  }
+}
+
 .main {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -195,6 +208,7 @@ body::-webkit-scrollbar-button {
 .main__section {
   position: relative;
   min-height: 100vh;
+  margin-bottom: 5rem;
   display: -ms-grid;
   display: grid;
   -webkit-box-align: center;
@@ -509,6 +523,12 @@ body::-webkit-scrollbar-button {
   height: 3.5rem;
   -webkit-animation: in-and-out 1s alternate infinite;
           animation: in-and-out 1s alternate infinite;
+}
+
+@media only screen and (max-height: 31.25em) {
+  .go-down-icon {
+    display: none;
+  }
 }
 
 @-webkit-keyframes in-and-out {
