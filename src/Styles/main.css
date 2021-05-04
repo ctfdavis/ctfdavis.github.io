@@ -818,7 +818,7 @@ a.anchor--3 {
 #stars:after {
   content: " ";
   position: absolute;
-  top: -500vh;
+  top: -550vh;
   width: 1px;
   height: 1px;
   background: transparent;
