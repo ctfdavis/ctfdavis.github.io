@@ -1,14 +1,25 @@
 import React, {useState, useContext} from 'react';
 import {AppContext} from './AppContext';
+import { HashLink } from 'react-router-hash-link';
 import logo from '../Images/site_logo.svg';
 import sprite from '../Images/sprite.svg';
 import Button from '@material-ui/core/Button';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
+import i18n from "i18next";
+import { useTranslation } from "react-i18next";
+import "../Translations/i18n";
 
 const Sidebar = () => {
+    const { t } = useTranslation();
 
-    const [sidebarClosed, setSidebarClosed] = useContext(AppContext);
+    const [sidebarClosed, setSidebarClosed, language, setLanguage] = useContext(AppContext);
+
+    const languageHandle = (lang) => {
+        setLanguage(lang);
+        i18n.changeLanguage(lang);
+        handleClose();
+    }
 
     const sidebarClose = () => {
         setSidebarClosed(true);
@@ -33,19 +44,19 @@ const Sidebar = () => {
 
             <ul className="sidebar__links">
                 <li className="sidebar__item">
-                    <a href="#" className="sidebar__link">Home</a>
+                    <HashLink smooth to="#Home" className="sidebar__link" onClick={sidebarClose}>{t("home")}</HashLink>
                 </li>
                 <li className="sidebar__item">
-                    <a href="#" className="sidebar__link">Selected Works</a>
+                    <HashLink smooth to="#Works" className="sidebar__link" onClick={sidebarClose}>{t("selected_works")}</HashLink>
                 </li>
                 <li className="sidebar__item">
-                    <a href="#" className="sidebar__link">Go-to Tech Stack</a>
+                    <HashLink smooth to="#TechStack" className="sidebar__link" onClick={sidebarClose}>{t("go_to_tech_stack")}</HashLink>
                 </li>
                 <li className="sidebar__item">
-                    <a href="#" className="sidebar__link">What's Next</a>
+                    <HashLink smooth to="#WhatsNext" className="sidebar__link" onClick={sidebarClose}>{t("whats_next")}</HashLink>
                 </li>
                 <li className="sidebar__item">
-                    <a href="#" className="sidebar__link">Get In Touch</a>
+                    <HashLink smooth to="#GetInTouch" className="sidebar__link" onClick={sidebarClose}>{t("get_in_touch")}</HashLink>
                 </li>
             </ul>
 
@@ -66,7 +77,7 @@ const Sidebar = () => {
 
         <div className="sidebar__languages">
             <Button className="sidebar__languages__btn" variant="contained" aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>
-                Languages
+                {t("languages")}
             </Button>
             <Menu
                 className="sidebar__languages__menu"
@@ -76,9 +87,9 @@ const Sidebar = () => {
                 open={Boolean(anchorEl)}
                 onClose={handleClose}
             >
-                <MenuItem onClick={handleClose}>中文</MenuItem>
-                <MenuItem onClick={handleClose}>English</MenuItem>
-                <MenuItem onClick={handleClose}>Bahasa Indonesia</MenuItem>
+                <MenuItem onClick={()=>{languageHandle("zh")}}>中文</MenuItem>
+                <MenuItem onClick={()=>{languageHandle("en")}}>English</MenuItem>
+                <MenuItem onClick={()=>{languageHandle("in")}}>Bahasa Indonesia</MenuItem>
             </Menu>
         </div>
 

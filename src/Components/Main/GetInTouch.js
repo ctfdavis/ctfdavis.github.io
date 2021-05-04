@@ -1,19 +1,21 @@
 import React from 'react';
 import Heading from './Heading';
+import { useTranslation } from "react-i18next";
+import "../../Translations/i18n";
 
 const GetInTouch = () => {
+    const { t } = useTranslation();
     return (
-        <section className="main__section">
+        <section id="GetInTouch" className="main__section">
             <Heading value={<><span className="special-hover">Get</span> <span className="special-hover">In</span> <span className="special-hover">Touch</span></>} />
             <div className="get-in-touch">
                 <div className="get-in-touch__text">
                     <h1 className="get-in-touch__heading">
-                       Seeking freelance opportunities! 
+                        {t("contact_heading")}
                      </h1>
-                    I’m eager to listen to your bold ideas and turn them into fruition.  If you have an idea you think is perhaps worth building,
-                     drop me a message here:
+                     {t("contact_text")}
                 </div>
-                <iframe className="get-in-touch__form" scrolling="no" src="https://docs.google.com/forms/d/e/1FAIpQLSekZX2U1kecK4q0gUuZmoeJTflyU2CEeN7DJGBTW2lGkzM40w/viewform?embedded=true" height="700" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                <iframe className="get-in-touch__form" src="https://docs.google.com/forms/d/e/1FAIpQLSekZX2U1kecK4q0gUuZmoeJTflyU2CEeN7DJGBTW2lGkzM40w/viewform?embedded=true" width="400" height="650" frameBorder="0" marginHeight="0" marginWidth="0">Loading…</iframe>
             </div>
         </section>
     )

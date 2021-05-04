@@ -6,9 +6,26 @@
     justify-content: space-around;
     color: $grey-white;
     font-family: "Nunito Sans", sans-serif;
+
+    @include respond(tab-port) {
+        flex-direction: column;
+        justify-content: center;
+        gap: 5rem;
+        padding: 0;
+    }
+
     &__logo {
         width: 28.5rem;
         height: 28.5rem;
+        transform-style: preserve-3d;
+        @include respond(tab-port) {
+            width: 25rem;
+            height: 25rem;
+        }
+        @media only screen and (max-height: 31.5em) {
+            width: 20rem;
+            height: 20rem;
+        }
     }
     &__cat {
         display: flex;
@@ -16,6 +33,12 @@
         align-items: center;
         width: 30%;
         gap: 3.5rem;
+        @include respond(tab-port) {
+            width: 50%;
+        }
+        @include respond(phone) {
+            width: 75%;
+        }
     }
     &__caption {
         font-size: 3rem;
@@ -24,7 +47,7 @@
 }
 
 .get-in-touch-btn {
-    width: 30%;
+    width: 100%;
 }
 
 .go-down-icon {

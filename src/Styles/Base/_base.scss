@@ -12,6 +12,22 @@
 html {
     box-sizing: border-box;
     font-size: 62.5%; // for making 1rem = 10px
+
+    @include respond(tab-land) {
+        font-size: 55%;
+    }
+
+    @include respond(tab-port) {
+        font-size: 52.5%;
+    }
+
+    @include respond(phone) {
+        font-size: 47.5%;
+    }
+
+    @media only screen and (max-height: 37.5em) {
+        font-size: 45%;
+    }
 }
 
 body {

@@ -56,6 +56,10 @@
         height: 3rem;
         width: 3rem;
         margin: 3rem 0 1rem;
+        transition: transform 1.5s;
+        &:hover {
+            transform: rotate(360deg);
+        }
         @media only screen and (max-width: 56.25em), (max-height: 37.5em) {
             margin: 0;
             order: -1;

@@ -2,6 +2,7 @@
 @import "./Utils/mixins";
 @import "./Base/base";
 @import "./Layout/nav";
+@import "./Components/link";
 @import "./Components/main";
 @import "./Components/sidebar";
 @import "./Pages/intro";
@@ -10,3 +11,4 @@
 @import "./Pages/whatsnext";
 @import "./Pages/get-in-touch";
 @import "./Themes/effects";
+@import "./Themes/stars";

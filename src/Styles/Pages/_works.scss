@@ -10,6 +10,10 @@
     justify-content: center;
     justify-items: center;
 
+    @include respond(tab-port) {
+        padding: 2%;
+    }
+
     &__card {
         width: 25rem;
         height: 25rem;

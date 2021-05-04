@@ -6,16 +6,29 @@
     font-family: "Nunito Sans", sans-serif;
     color: $grey-white;
 
+    @include respond(tab-port) {
+        flex-direction: column;
+        justify-content: center;
+        gap: 5rem;
+        padding: 0;
+    }
+
     &__logo {
         width: 35rem;
         height: 35rem;
     }
 
     &__text {
-        width: 30%;
+        width: 34%;
         font-size: 2.5rem;
         text-align: center;
         line-height: 1.6;
+        @include respond(tab-port) {
+            width: 50%;
+        }
+        @include respond(phone) {
+            width: 75%;
+        }
     }
 
     &__name {

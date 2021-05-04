@@ -9,7 +9,11 @@
         display: grid;
         align-items: center;
         justify-items: center;
-        
+
+        @include respond(phone) {
+            display: block;
+        }
+
         &__heading {
             position: absolute;
             top: 0;
@@ -19,6 +23,22 @@
             text-transform: uppercase;
 
             color: $primary-rose;
+
+            @media only screen and (max-width: 56.25em), (max-height: 37.5em) {
+                writing-mode: vertical-rl;
+                top: 15%;
+                right: 0;
+            }
+
+            @include respond(phone) {
+                display: none;
+            }
         }
+    }
+}
+
+#Home > *:first-child {
+    @media only screen and (max-width: 56.25em), (max-height: 37.5em) {
+        display: none;
     }
 }

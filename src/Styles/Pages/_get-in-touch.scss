@@ -5,6 +5,14 @@
     align-items: center;
     font-family: "Nunito Sans", sans-serif;
     color: $grey-white;
+
+    @include respond(tab-port) {
+        flex-direction: column;
+        justify-content: center;
+        gap: 5rem;
+        padding: 0;
+    }
+
     &__heading {
         font-size: 3.5rem;
     }
@@ -12,5 +20,13 @@
         width: 50%;
         font-size: 2.5rem;
         font-weight: 200;
+        @include respond(tab-port) {
+            width: 70%;
+        }
+    }
+    &__form {
+        @include respond(phone) {
+            transform: scale(0.8);
+        }
     }
 }
