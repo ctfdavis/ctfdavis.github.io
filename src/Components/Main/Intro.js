@@ -43,7 +43,7 @@ const Intro = () => {
                         {t("intro")}
                     </p>
                     <HashLink className="hashlink" smooth to="#GetInTouch">
-                        <Button className="get-in-touch-btn" variant="contained">
+                        <Button className="get-in-touch-btn material-ui-btn" variant="contained">
                             {t("get_in_touch")}
                         </Button></HashLink>
                 </div>

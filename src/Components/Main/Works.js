@@ -38,9 +38,10 @@ const Works = () => {
             <div className="works">
                 {worksData.map((items, index) => (
                     <Popup key={index} trigger={
-                    <div className="works__card">
+                    <figure className="works__card">
                         <img src={items[0]} alt={items[1]} className="works__card__image" />
-                    </div>
+                        <figcaption className="works__card__caption">{items[1]}</figcaption>
+                    </figure>
                 } position="center">
                     <div className="works__popup">
                         {items[2]}<br />

@@ -265,8 +265,10 @@ a.anchor--3 {
     -webkit-writing-mode: vertical-rl;
         -ms-writing-mode: tb-rl;
             writing-mode: vertical-rl;
-    top: 15%;
-    right: 0;
+    top: 20%;
+    right: 0.5rem;
+    font-size: 2rem;
+    letter-spacing: 0.05rem;
   }
 }
 
@@ -288,7 +290,7 @@ a.anchor--3 {
   left: 0;
   background-color: #1F0E31;
   color: rgba(255, 255, 255, 0.8);
-  font-size: 1.75rem;
+  font-size: 2rem;
   font-family: "Nunito Sans", sans-serif;
   font-weight: 300;
   width: 25rem;
@@ -613,16 +615,66 @@ a.anchor--3 {
 .works__card {
   width: 25rem;
   height: 25rem;
+  border-radius: 3rem;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
 }
 
 .works__card__image {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
   display: block;
-  border-radius: 3rem;
   cursor: pointer;
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+}
+
+.works__card__image:hover {
+  width: 110%;
+  height: 110%;
+}
+
+.works__card__image:hover ~ * {
+  bottom: 10%;
+  font-size: 1.3rem;
+  opacity: 1;
+  visibility: visible;
+}
+
+.works__card__caption {
+  position: absolute;
+  cursor: default;
+  bottom: -5%;
+  opacity: 0;
+  visibility: hidden;
+  font-family: Bungee, cursive;
+  text-shadow: 1px -2px 0.5px #A2FFD4, 1px 2px 5px #A24E8F;
+  background: -webkit-gradient(linear, left top, left bottom, from(#020204), to(#1F0E31));
+  background: linear-gradient(#020204, #1F0E31);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 0rem;
+  -webkit-transition: all 0.25s ease-out;
+  transition: all 0.25s ease-out;
+}
+
+.works__card__caption:hover {
+  bottom: 10%;
+  font-size: 1.3rem;
+  opacity: 1;
+  visibility: visible;
+  text-shadow: 1px -2px 0.5px #FEF5F3, 1px 2px 5px #A2FFD4;
 }
 
 .works__popup {
@@ -639,6 +691,8 @@ a.anchor--3 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: 100%;
+  height: 100%;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -653,7 +707,6 @@ a.anchor--3 {
   color: rgba(255, 255, 255, 0.8);
   gap: 1rem;
   text-align: center;
-  margin-bottom: 10rem;
 }
 
 @media (max-width: 450px) {
@@ -679,7 +732,7 @@ a.anchor--3 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 5%;
+  height: 100vh;
   -ms-flex-pack: distribute;
       justify-content: space-around;
   -webkit-box-align: center;
@@ -953,5 +1006,11 @@ a.anchor--3 {
     -webkit-transform: translateY(-50vh);
             transform: translateY(-50vh);
   }
+}
+
+.material-ui-btn {
+  font-size: 1.3rem !important;
+  font-family: 'Nunito Sans', sans-serif !important;
+  font-weight: 700 !important;
 }
 /*# sourceMappingURL=main.css.map */

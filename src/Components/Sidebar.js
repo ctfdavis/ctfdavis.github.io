@@ -76,7 +76,7 @@ const Sidebar = () => {
             </ul>
 
         <div className="sidebar__languages">
-            <Button className="sidebar__languages__btn" variant="contained" aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>
+            <Button className="sidebar__languages__btn material-ui-btn" variant="contained" aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>
                 {t("languages")}
             </Button>
             <Menu
