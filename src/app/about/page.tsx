@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
+import config from "@/app/config";
 
 export const metadata: Metadata = {
-  title: "about specific",
+  ...config.siteMeta.about,
 };
 
 export default function About() {
