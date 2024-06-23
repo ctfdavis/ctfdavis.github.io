@@ -10,6 +10,7 @@ export default function Home() {
       {recentThree.map((writing, i) => {
         return (
           <div
+            key={writing.slug}
             className={clsx(
               "hover:opacity-100 transition-opacity duration-300",
               `${
@@ -24,7 +25,7 @@ export default function Home() {
               }`
             )}
           >
-            <WritingPreviewCard key={writing.slug} writing={writing} />
+            <WritingPreviewCard writing={writing} />
           </div>
         );
       })}

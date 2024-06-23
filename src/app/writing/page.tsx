@@ -1,7 +1,13 @@
 import Link from "next/link";
-import writingList from "./writingList";
-import { formatWritingDate } from "../utils";
+import { Metadata } from "next";
 import clsx from "clsx";
+import writingList from "./writingList";
+import { formatWritingDate } from "@/app/utils";
+import config from "@/app/config";
+
+export const metadata: Metadata = {
+  ...config.siteMeta.writing,
+};
 
 export default function Writing() {
   return (

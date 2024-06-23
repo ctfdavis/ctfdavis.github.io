@@ -13,7 +13,7 @@ files.forEach((file) => {
     return;
   }
 
-  const filePath = path.join(writingFolder, file, "page.tsx");
+  const filePath = path.join(writingFolder, file, "metadata.ts");
   // check if file exists
   if (!fs.existsSync(filePath)) {
     return;

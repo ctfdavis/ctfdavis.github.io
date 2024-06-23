@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 export default function About() {
   return (
     <Wrap>
-      <p className="text-3xl md:text-4xl text-center">
+      <p className="text-3xl leading-relaxed text-center">
         {config.me.description}
       </p>
     </Wrap>
