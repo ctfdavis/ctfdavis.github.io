@@ -1,0 +1,40 @@
+#__main-content {
+  > h1:not(.__unwrap-content),
+  :not(.__unwrap-content) h1:not(.__unwrap-content) {
+    @apply text-4xl font-bold my-8;
+  }
+  > h2:not(.__unwrap-content),
+  :not(.__unwrap-content) h2:not(.__unwrap-content) {
+    @apply text-3xl font-bold my-6;
+  }
+  > h3:not(.__unwrap-content),
+  :not(.__unwrap-content) h3:not(.__unwrap-content) {
+    @apply text-2xl font-bold my-5;
+  }
+  > p:not(.__unwrap-content),
+  > ul:not(.__unwrap-content),
+  > ol:not(.__unwrap-content),
+  > blockquote:not(.__unwrap-content),
+  > pre:not(.__unwrap-content),
+  > hr:not(.__unwrap-content),
+  :not(.__unwrap-content) p:not(.__unwrap-content),
+  :not(.__unwrap-content) u:not(.__unwrap-content)l,
+  :not(.__unwrap-content) o:not(.__unwrap-content)l,
+  :not(.__unwrap-content) blockquote:not(.__unwrap-content),
+  :not(.__unwrap-content) pre:not(.__unwrap-content),
+  :not(.__unwrap-content) hr:not(.__unwrap-content) {
+    @apply my-4;
+  }
+  > ul:not(.__unwrap-content),
+  :not(.__unwrap-content) ul:not(.__unwrap-content) {
+    @apply list-disc;
+  }
+  > ol:not(.__unwrap-content),
+  :not(.__unwrap-content) ol:not(.__unwrap-content) {
+    @apply list-decimal;
+  }
+
+  pre {
+    @apply text-sm;
+  }
+}

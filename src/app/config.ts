@@ -32,6 +32,8 @@ const config = {
   ],
   me: {
     name: "Davis Chan",
+    description:
+      "I'm a curious programmer with a passion for solving problems through logical thinking. When I'm not programming, I spend my time playing the guitar, delving into good books, or embracing tranquillity through meditation and running.",
     githubProfile,
     email: "davis@lambdadragon.dev",
   },

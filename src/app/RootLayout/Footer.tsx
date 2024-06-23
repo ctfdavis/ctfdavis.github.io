@@ -7,7 +7,7 @@ import config from "@/app/config";
 export default function Footer() {
   const pathname = usePathname();
   return (
-    <footer className="mt-auto py-4 text-center text-sm">
+    <footer id="__site-footer" className="mt-auto py-4 text-center text-sm">
       <nav>
         <ul className="list-none">
           {config.footerLinks.map((link) => (
@@ -31,7 +31,12 @@ export default function Footer() {
           ))}
         </ul>
       </nav>
-      <p className="text-stone-500 mt-3">lambdragon.dev</p>
+      <a
+        className="inline-block text-stone-500 mt-4"
+        href={`mailto:${config.me.email}`}
+      >
+        {config.me.email}
+      </a>
     </footer>
   );
 }
