@@ -1,15 +1,15 @@
 import { Metadata } from "next";
-import { WritingMetadata } from "./types";
+import { BlogMetadata } from "./types";
 
-export function writingMeta2Meta(writingMeta: WritingMetadata): Metadata {
+export function blogMeta2Meta(blogMeta: BlogMetadata): Metadata {
   return {
-    title: writingMeta.title,
-    description: writingMeta.description,
-    category: writingMeta.tags?.join(", "),
+    title: blogMeta.title,
+    description: blogMeta.description,
+    category: blogMeta.tags?.join(", "),
   };
 }
 
-export function createWritingDate({
+export function createBlogDate({
   year,
   month,
   day,
@@ -21,6 +21,6 @@ export function createWritingDate({
   return new Date(Date.UTC(year, month - 1, day));
 }
 
-export function formatWritingDate(date: Date): string {
+export function formatBlogDate(date: Date): string {
   return date.toISOString().split("T")[0];
 }

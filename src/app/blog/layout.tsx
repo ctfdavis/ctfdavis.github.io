@@ -1,4 +1,4 @@
-import "./writing.scss";
+import "./blog.scss";
 import "./night-owl.scss";
 
 export default function Layout({

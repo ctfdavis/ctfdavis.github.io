@@ -1,8 +1,8 @@
 import Link from "next/link";
 import { Metadata } from "next";
 import clsx from "clsx";
-import writingList from "./writingList";
-import { formatWritingDate } from "@/app/utils";
+import writingList from "./blog-list";
+import { formatBlogDate } from "@/app/utils";
 import config from "@/app/config";
 
 export const metadata: Metadata = {
@@ -22,7 +22,7 @@ export default function Writing() {
             )}
           >
             <div className="text-stone-400 text-sm xl:text-base">
-              {formatWritingDate(writing.metadata.published)}
+              {formatBlogDate(writing.metadata.published)}
             </div>
             {writing.metadata.tags?.length && (
               <div className="uppercase text-xs w-fit border border-teal-50 p-1 mt-2 xl:ml-6 xl:mt-0">

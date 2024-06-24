@@ -1,26 +1,26 @@
-import { WritingMetadata } from "../types";
-import { formatWritingDate } from "../utils";
+import { BlogMetadata } from "../types";
+import { formatBlogDate } from "../utils";
 
 export default function FrontMatter({
-  writingMetadata,
+  blogMetadata,
 }: {
-  writingMetadata: WritingMetadata;
+  blogMetadata: BlogMetadata;
 }) {
   return (
     <aside className="text-center">
       <p className="text-sm">
-        Published: {formatWritingDate(writingMetadata.published)}
+        Published: {formatBlogDate(blogMetadata.published)}
       </p>
-      {writingMetadata.updated && (
+      {blogMetadata.updated && (
         <p className="text-sm">
-          Updated: {formatWritingDate(writingMetadata.updated)}
+          Updated: {formatBlogDate(blogMetadata.updated)}
         </p>
       )}
-      {writingMetadata.tags?.length ? (
+      {blogMetadata.tags?.length ? (
         <div className="flex flex-wrap items-center justify-center text-sm gap-2">
           <span>Tags:&nbsp;</span>
           <ul className="__unwrap-content flex flex-wrap items-baseline gap-2">
-            {writingMetadata.tags.map((tag, i) => (
+            {blogMetadata.tags.map((tag, i) => (
               <li
                 key={tag}
                 className="text-xs uppercase p-1 border border-teal-50"
@@ -31,8 +31,8 @@ export default function FrontMatter({
           </ul>
         </div>
       ) : null}
-      <h1>{writingMetadata.title}</h1>
-      <p className="text-sm text-slate-300">{writingMetadata.description}</p>
+      <h1>{blogMetadata.title}</h1>
+      <p className="text-sm text-slate-300">{blogMetadata.description}</p>
     </aside>
   );
 }

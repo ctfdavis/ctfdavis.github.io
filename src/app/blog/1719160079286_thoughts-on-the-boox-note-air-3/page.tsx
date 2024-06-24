@@ -1,14 +1,14 @@
 import Wrap from "@/app/components/Wrap";
-import FrontMatter from "@/app/writing/FrontMatter";
+import FrontMatter from "@/app/blog/FrontMatter";
 import Content from "./content.mdx";
-import { writingMetadata } from "./metadata";
+import { blogMetadata } from "./metadata";
 export { metadata } from "./metadata";
 
 export default function Page() {
   return (
     <Wrap>
       <>
-        <FrontMatter writingMetadata={writingMetadata} />
+        <FrontMatter blogMetadata={blogMetadata} />
         <hr />
         <Content />
       </>

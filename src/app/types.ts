@@ -1,4 +1,4 @@
-export type WritingMetadata = {
+export type BlogMetadata = {
   title: string;
   description: string;
   published: Date;
@@ -7,7 +7,7 @@ export type WritingMetadata = {
   draft?: boolean;
 };
 
-export type Writing = {
-  metadata: WritingMetadata;
+export type Blog = {
+  metadata: BlogMetadata;
   slug: string;
 };
