@@ -10,9 +10,9 @@ const config = {
       title: "About | λ/dragon",
       description: "About the author of λ/dragon",
     },
-    writing: {
-      title: "Writing | λ/dragon",
-      description: "Writing by λ/dragon",
+    blog: {
+      title: "Blog | λ/dragon",
+      description: "Blog by λ/dragon",
     },
   },
   footerLinks: [
