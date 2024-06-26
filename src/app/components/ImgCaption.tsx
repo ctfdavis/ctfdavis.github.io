@@ -1,8 +1,8 @@
-export default function ImgCaption({ children }: { children: string }) {
+export default function ImgCaption({ caption }: { caption: string }) {
   return (
     <p>
       <small>
-        <i>{children}</i>
+        <i>{caption}</i>
       </small>
     </p>
   );
