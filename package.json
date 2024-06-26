@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "start": "serve out",
     "lint": "next lint"
   },
   "dependencies": {
@@ -17,6 +17,7 @@
     "next": "14.2.4",
     "react": "^18",
     "react-dom": "^18",
+    "rehype-external-links": "^3.0.0",
     "rehype-highlight": "^7.0.0"
   },
   "devDependencies": {
@@ -27,6 +28,7 @@
     "eslint-config-next": "14.2.4",
     "postcss": "^8",
     "sass": "^1.77.6",
+    "serve": "^14.2.3",
     "tailwindcss": "^3.4.1",
     "typescript": "^5"
   }

@@ -1,15 +1,16 @@
 import clsx from "clsx";
-import WritingPreviewCard from "./WritingPreviewCard";
-import writingList from "./writing/writingList";
+import BlogPreviewCard from "@/app/blog/BlogPreviewCard";
+import blogList from "@/app/blog/blog-list";
 
-const recentThree = writingList.slice(0, 3);
+const recentThree = blogList.slice(0, 3);
 
 export default function Home() {
   return (
     <main className="flex flex-col xl:flex-row xl:h-full xl:items-center px-2 pb-8 w-5xl max-w-full mx-auto flex-grow">
-      {recentThree.map((writing, i) => {
+      {recentThree.map((blog, i) => {
         return (
           <div
+            key={blog.slug}
             className={clsx(
               "hover:opacity-100 transition-opacity duration-300",
               `${
@@ -24,7 +25,7 @@ export default function Home() {
               }`
             )}
           >
-            <WritingPreviewCard key={writing.slug} writing={writing} />
+            <BlogPreviewCard blog={blog} />
           </div>
         );
       })}

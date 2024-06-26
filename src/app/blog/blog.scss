@@ -37,4 +37,8 @@
   pre {
     @apply text-sm;
   }
+
+  a {
+    @apply underline text-teal-200;
+  }
 }
