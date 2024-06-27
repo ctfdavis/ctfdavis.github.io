@@ -1,6 +1,7 @@
 import * as NextMdx from "@next/mdx";
 import rehypeHighlight from "rehype-highlight";
 import rehypeExternalLinks from "rehype-external-links";
+import rehypeSlug from "rehype-slug";
 
 const withMDX = NextMdx.default({
   options: {
@@ -10,6 +11,7 @@ const withMDX = NextMdx.default({
         rehypeExternalLinks,
         { target: "_blank", rel: ["noopener", "noreferrer"] },
       ],
+      rehypeSlug,
     ],
   },
 });
