@@ -1,6 +1,7 @@
 import { Hash } from "lucide-react";
 import { ReactNode } from "react";
 import type { MDXComponents } from "mdx/types";
+import { ImageLightbox } from "./ImageLightbox";
 
 type HeadingProps = {
   id?: string;
@@ -26,5 +27,6 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     h4: heading("h4"),
     h5: heading("h5"),
     h6: heading("h6"),
+    img: ImageLightbox,
   };
 }
